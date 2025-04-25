@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$WASTED – GTA6 Meme Coin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #0a0a0a;
+      background-image: url('https://i.imgur.com/m70XW7G.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.75);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 15px 30px;
+      border: 2px solid #ff5cb1;
+      border-radius: 12px;
+      max-width: 300px;
+      margin: 0 auto 30px auto;
+      transition: background-color 0.3s ease-in-out;
+    }
+    nav:hover {
+      background-color: #ff5cb1;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav li {
+      margin: 10px 0;
+    }
+    nav a {
+      color: #ff5cb1;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #000;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    .tagline {
+      font-size: 1.5rem;
+      color: #ff5cb1;
+    }
+    .countdown {
+      font-size: 1.8rem;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background: #00000088;
+      display: inline-block;
+      border-radius: 10px;
+    }
+    .section {
+      margin-top: 60px;
+      background: rgba(0,0,0,0.6);
+      padding: 20px;
+      border-radius: 12px;
+    }
+    .section h2 {
+      color: #ff5cb1;
+    }
+    .bounty-table {
+      width: 100%;
+      max-width: 700px;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    .bounty-table th, .bounty-table td {
+      padding: 10px;
+      border: 1px solid #fff;
+    }
+    .bounty-table th {
+      background: #ff5cb1;
+      color: #000;
+    }
+    .cta {
+      background: #ff5cb1;
+      color: #000;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+      transition: background 0.3s ease;
+    }
+    .cta:hover {
+      background: #fff;
+      color: #111;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .tagline {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="overlay">
+  <nav>
+    <ul>
+      <li><a href="#about">🧠 Über $WASTED</a></li>
+      <li><a href="#bounty">💰 Bounty</a></li>
+      <li><a href="https://pump.fun/" target="_blank">🚀 Jetzt Minten</a></li>
+      <li><a href="https://yourformlink.com" target="_blank">📤 Video Einreichen</a></li>
+    </ul>
+  </nav>
+
+  <div class="container" id="about">
+    <h1>$WASTED</h1>
+    <div class="tagline">The First GTA6 Meme Coin</div>
+    <div class="countdown" id="countdown">Launching in: XXd XXh XXm</div>
+  </div>
+
+  <div class="container section" id="bounty">
+    <h2>🎥 Viral Bounty Challenge</h2>
+    <p>Poste ein virales Video mit <strong>#GetWASTEDCoin</strong> und sichere dir $WASTED Tokens vor dem Drop!</p>
+    <table class="bounty-table">
+      <thead>
+        <tr><th>Views</th><th>Belohnung</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>10K+</td><td>5,000 $WASTED</td></tr>
+        <tr><td>50K+</td><td>15,000 $WASTED</td></tr>
+        <tr><td>100K+</td><td>35,000 $WASTED</td></tr>
+        <tr><td>500K+</td><td>100,000 $WASTED</td></tr>
+        <tr><td>1M+</td><td>250,000 $WASTED + OG NFT</td></tr>
+      </tbody>
+    </table>
+    <a href="https://yourformlink.com" class="cta" target="_blank">Jetzt Video Einreichen</a>
+  </div>
+</div>
+
+<script>
+  const launchDate = new Date("2025-05-01T00:00:00").getTime();
+  const countdown = document.getElementById("countdown");
+  setInterval(() => {
+    const now = new Date().getTime();
+    const distance = launchDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    countdown.textContent = `Launching in: ${days}d ${hours}h ${minutes}m`;
+  }, 60000);
+</script>
+</body>
+</html>
